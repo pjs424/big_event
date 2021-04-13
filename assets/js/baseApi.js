@@ -12,7 +12,7 @@ $.ajaxPrefilter(function(options) {
 
     // 全局统一挂载 complete 回调函数
     options.complete = function(response) {
-        console.log(response);
+        // console.log(response);
         const res = response.responseJSON;
         if (res.status === 1 && res.message === '身份认证失败！') {
             // 说明没有权限
